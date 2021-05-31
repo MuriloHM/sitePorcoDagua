@@ -1,0 +1,16 @@
+create database jogos;
+
+use jogos;
+
+drop table cadajog;
+create table cadajog(
+codigo int auto_increment,
+nome varchar(100),
+nickname varchar(100),
+email varchar(100),
+senha varchar(100),
+primary key(codigo)
+);
+select * from cadajog;
+
+

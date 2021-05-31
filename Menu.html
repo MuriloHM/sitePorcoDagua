@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<Title>Porco D'Água</Title>
+		<meta name = "Description " content = "Página informativa sobre jogos da empresa Porco D'Água"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<meta name = "Keywords" content = "jogos, empresa, porco da agua, fatec scs, trabalhos, brasil"/>
+		<meta name = "Author" content = "André, João, Murilo, Nathalie"/>
+		<link rel="stylesheet" href="estilomenu.css"/>
+
+		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script 
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous">
+		</script>
+			
+		<style>
+		/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+		.navbar {
+		margin-bottom: 50px;
+		border-radius: 0;
+		
+		
+		}
+    
+		/* Remove the jumbotron's default bottom margin */ 
+		.jumbotron {
+		margin-bottom: 0;
+		background-color: #3B8227;
+		color: white;
+		
+		}
+   
+		/* Add a gray background color and some padding to the footer */
+		footer {
+		background-color: #f2f2f2;
+		padding: 25px;
+		}
+		</style>
+		
+	</head>	
+	<body>
+		<div class="jumbotron text-center" >
+			<h1>Porco D'água</h1>
+			<p>Seja Bem-vindo(a)</p> 
+		</div>
+		
+	<div class="corpo">
+		<nav class="navbar navbar-default" >
+				<div class="container-fluid">
+					<div class="navbar-header">	
+					  <a class="navbar-brand" href="#">Porco D'água</a>
+					  </div>
+					
+					<ul class="nav navbar-nav" >
+					  <li class="active" ><a href="#">Menu</a></li>
+					  <li><a href="empresa.html" >Sobre a empresa</a></li>
+					  <li><a href="Jogo.html" >O Jogo</a></li>
+					  <li><a href="Contato.html">Contato</a></li>
+					  
+					</ul>
+					
+				</div>
+		</nav>
+		
+		
+		
+		<div class="row" >
+		<div class="col-sm-4 ">
+		  <div class="panel panel-success" >
+			<div class="panel-heading" align="center">Logo</div>
+			<div class="panel-body" align="center"><img src="imagens/Porco.png" class="img-circle" alt="Cinque Terre" ></div>
+		  </div>
+		</div>
+	 
+		<div class="row">
+		<div class="col-sm-4">
+		  <div class="panel panel-success">
+			<div class="panel-heading" align="center">Personagem principal</div>
+			<div class="panel-body" align="center">
+			<!--<img src="Raoni.png" class="img-circle"  alt="Image">-->
+			<img src="imagens/Raoni.png" class="img-circle"  alt="Image" width="300px" height="200px">
+			</div>
+			<div class="panel-footer" align="center">Nosso querido Raoni</div>
+		  </div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+			  <div class="panel panel-success">
+				<div class="panel-heading" align="center">Documentação</div>
+				<div class="panel-body">
+					<p><b>Caso seja de seu desejo receber uma cópia da documentação de nosso jogo, por favor clique 
+					no botão abaixo, onde terá o acesso a uma cópia de nossa documentação básica de nosso jogo.
+					</b></p>
+					<div class="botao" align="center">
+						<a href = "documents/Porco.docx" >
+						<input type="button" class="btn btn-success" value="Documento" id = "enviar"/>
+						</a>
+					</div>
+				</div>
+				
+			  </div>
+			</div>
+		</div>
+		
+		<footer class="container-fluid text-center">
+		  <p>Login</p>  
+		  <form method="post" action="login.php" class="form-inline">
+			Email: <input type="text" class="form-control" id="email" name="email"size="50" placeholder="Email Address">
+			Senha: <input type="password" class="form-control" id="senha" name="senha" placeholder="Password"/>
+			<button type="submit" class="btn btn-success"name="b1">Entrar</button>
+			<button type="submit" class="btn btn-success" name="b2">Cadastrar</button>
+		  </form>
+		 
+		</footer>
+			<!-- <?php if(isset($_POST["b1"])) validarAcesso(); ?>-->
+		
+		
+		
+		
+		</div>	
+	</body>
+	
+</html>
+<!--<?php
+function validarAcesso(){
+	$con = new mysqli("localhost","root","", "jogos");	
+	$email = $_POST["email"];
+	$senha = $_POST["senha"];
+	$sql = "select * from usuario where email='$email' and senha=md5('$senha')";
+	//echo $sql;
+	$resultado = mysqli_query($con, $sql);
+	if($reg = mysqli_fetch_array($resultado)){
+		echo "Acesso Liberado";
+	} else {
+		echo "usuário ou senha inválidos";	
+	}
+	$con->close();
+}
+?>-->

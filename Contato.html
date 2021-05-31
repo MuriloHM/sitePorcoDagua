@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<Title>Contato</Title>
+		<meta name = "Description " content = "Página para contato"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<meta name = "Keywords" content = "jogos, empresa, porco da agua, fatec scs, trabalhos, brasil"/>
+		<meta name = "Author" content = "André, João, Murilo, Nathalie"/>
+		<link rel="stylesheet" href="estilocontato.css"/>
+		
+		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script 
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous">
+		</script>
+			
+		<style>
+		/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+		.navbar {
+		margin-bottom: 50px;
+		border-radius: 0;
+		}
+    
+		/* Remove the jumbotron's default bottom margin */ 
+		.jumbotron {
+		margin-bottom: 0;
+		}
+   
+		/* Add a gray background color and some padding to the footer */
+		footer {
+		background-color: #f2f2f2;
+		padding: 25px;
+		}
+		</style>
+		
+	</head>	
+	<body>
+		<div class="corpo">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">Porco D'água</a>
+			  </div>
+			<ul class="nav navbar-nav">
+			  <li><a href="Menu.html">Menu</a></li>
+			  <li><a href="empresa.html" >Sobre a empresa</a></li>
+			  <li><a href="Jogo.html" >O Jogo</a></li>			  
+			  <li class="active" ><a href="#">Contato</a></li>
+			  
+		  </div>
+			  
+			</ul>
+					
+			
+		</div>
+		</nav>
+		<div class="janela">
+		<h1><font size="52">Contato</h1></font>
+		<fonte face = "Times New Roman" size = "3px"><i> Seja bem vindo, preencha o <b>formulário</b> abaixo para:</i> </fonte><br>
+		<ul>
+			<li>Duvidas</li>
+			<li>Sugestões</li>
+			<li>Criticas</li>
+		
+		</ul>
+		
+		
+		<form method="post" action="gravar.php">
+		
+	
+		<!--Nome-->
+		<div class="form-group">
+		<label for="usr">Nome:</label>
+		<input type="text" class="form-control" id="usr" placeholder="Nome" maxlength="50" required> 
+		</div>
+		
+		<!--Email-->
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Email" maxlength="45" required>
+		</div>
+		
+		<!--Telefone-->
+		<div class="form-group">
+		<label for="usr">Telefone:</label>
+		<input type="tel" class="form-control" id="usr" pattern = "[0-9]{2} [0-9]{4,5}-[0-9]{4}"  placeholder="Digite no formato: (xx) xxxx-xxxx" maxlength="15" required> 
+		</div>
+		
+		<!--Qual é o assunto?-->
+		<div class="form-group">
+		<label for="sel1">Assunto:</label>
+		<select class="form-control" id="sel1">
+			<option>Duvidas</option>
+			<option>Sugestões</option>
+			<option>Criticas</option>
+		</select>
+		</div>
+		
+		
+		<fonte face = "Times New Roman" size = "3px"> Deseja receber uma cópia deste e-mail </fonte> 
+		
+		<!--Opções-->
+		<div class="radio">
+		<label><input type="radio" name="optradio" checked>Sim</label>
+		</div>
+		<div class="radio">
+		<label><input type="radio" name="optradio">Não</label>
+		</div>
+	
+		
+		<!--Caixa de texto-->
+		<div class="form-group">
+		<label for="comment">Mensagem:</label>
+			<textarea class="form-control" rows="5" id="comment"></textarea>
+		</div>
+		
+		<div class="butao" align="center">
+			<button class="btn btn-success" >Enviar</Button>
+		</div>
+		</form>
+		
+		 
+						
+		</div>
+		
+			
+	</body>
+	
+</html>

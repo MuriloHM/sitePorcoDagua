@@ -1,0 +1,32 @@
+.corpo
+{
+	
+	
+	
+}
+.janela
+{
+	width: 50%;
+	margin-left: 25%;
+
+	background-color: #7FFF54;
+	color:white;
+	padding: 5px;
+	border: 10px solid #66CD44;
+	border-radius: 10px;
+		
+}
+
+@media screen and (max-width: 500px) and (min-width: 0px)
+{
+	.janela{
+		width: 100%;
+		margin-left: 0%;
+		background-color: #7FFF54;
+		color:white;
+		padding: 0px;
+		border: solid 0px ;
+		border-radius: 5px;
+		
+	}
+}

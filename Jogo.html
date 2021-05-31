@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<Title>O Jogo</Title>
+		<meta name = "Description " content = "Página sobre o jogo da empresa Porco d'água"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<meta name = "Keywords" content = "jogos, empresa, porco da agua, fatec scs, trabalhos, brasil, download"/>
+		<meta name = "Author" content = "André, João, Murilo, Nathalie"/>
+		<link rel = "stylesheet" href = "estilojogo.css"/>
+		
+	
+		
+				
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script 
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous">
+		</script>
+			
+
+		<style>
+		/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+		.navbar {
+		margin-bottom: 50px;
+		border-radius: 0;
+		}
+    
+		/* Remove the jumbotron's default bottom margin */ 
+		.jumbotron {
+		margin-bottom: 0;
+		}
+   
+		/* Add a gray background color and some padding to the footer */
+		footer {
+		background-color: #f2f2f2;
+		padding: 25px;
+		}
+		</style>
+	</head>
+	
+	<body>
+	<div class="corpo">
+			<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">Porco D'água</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li><a href="Menu.html">Menu</a></li>
+			  <li><a href="empresa.html" >Sobre a empresa</a></li>
+			  <li class="active"><a href="#" >O Jogo</a></li>
+			  <li><a href="Contato.html">Contato</a></li>
+			</ul>
+			
+		  </div>
+		</nav>
+		
+		
+		<div class="janela">
+			<form method="post" action="gravar.php">
+			
+			<h1 align="center">Crie uma conta</h1>
+			<h3>Coloque seus dados para ter acesso ao download do jogo</h3>
+			
+			
+			<!--Nome-->
+			<div class="form-group">
+			<label for="usr">Nome:</label>
+			<input type="text"  class="form-control" placeholder="Nome" maxlength="50" id="nm" /> 
+			</div>
+			
+			<!--Sobrenome-->
+			<div class="form-group">
+			<label for="usr">Sobrenome:</label>
+			<input type="text"  class="form-control" id="sbm" placeholder="Sobrenome" maxlength="50" /> 
+			</div>
+			
+			<!--Nickname-->
+			<div class="form-group">
+			<label for="nkm">Nickname:</label>
+			<input type="text"  class="form-control" placeholder="Nickname" maxlength="50" id="nkm" /> 
+			</div>
+			
+			<!--Nascimento-->
+			<div class="form-group">
+				<label for="usr">Data de nascimento:</label>
+				<input type="date" class="form-control" id="nsc" >
+			</div>
+			
+			<!--Email-->
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Email" maxlength="45" />
+			</div>
+
+				
+			<!--Senha-->
+			<div class="form-group">
+				<label for="pwd">Senha:</label>
+				<input type="password" class="form-control" id="pwd" placeholder="Senha alfanumérica"  />
+			</div>
+			<!--Confirmação de senha-->
+			<div class="form-group">
+				<label for="pwd1">Confirmação senha:</label>
+				<input type="password" class="form-control" id="pwd1" placeholder="Confirmar Senha alfanumérica"  />
+			</div>
+								
+		
+			
+
+			<!--<div id="tentei">-->
+			<!--<a href = "Porco.docx" >-->
+			<div class="botão"  align="center" >
+			<input type="button" class="btn btn-success" value="Enviar" id = "enviar" onclick="baixar();" />
+			</div>
+			<!--</a>-->
+		</div>
+	</div>
+	</body>
+	
+</html>
+<script lang="javascript">
+function baixar(){
+	if (nm.value.length < 3 )
+	{
+		alert("Informe um nome !");
+		nm.focus();
+		return false;
+	}
+	
+	if(sbm.value.length < 3 )	
+	{
+		alert("Informe um sobrenome !");
+		sbm.focus();
+		return false;
+	}
+	
+	if(nsc.value.length <= 0)
+	
+	{
+		alert("Coloque sua data de nascimento !");
+		nsc.focus();
+		return false;
+	}
+	
+	if (email.value.length < 6 ||
+		email.value.indexOf("@") <= 0 ||
+		email.value.indexOf(".") <= 0)
+		
+	{
+		alert("Informe um email válido!");
+		email.focus();
+		return false;
+	}
+	
+	if (pwd.value.length < 5 ||
+		isNaN(pwd.value)==false)
+		{
+			alert("Digite uma senha alfanumérica de ao menos 6 caracteres !")
+			pwd.focus();
+			return false;
+		}
+	if(pwd != pwd1 )
+	{
+			alert("Digite uma senha alfanumérica igual a outra !")
+			pwd1.focus();
+			return false;
+	}
+	if (nkm.value.length < 3 )
+	{
+		alert("Informe um nickname válido !");
+		nkm.focus();
+		return false;
+	}
+	
+		
+
+		alert("Tudo certo, seu download começará em breve !")
+		
+
+	
+}
+</script>
